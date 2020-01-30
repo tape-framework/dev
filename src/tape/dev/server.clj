@@ -3,6 +3,9 @@
   (:require [ring.middleware.resource :as resource]
             [ring.util.response :as response]))
 
+(defn not-found [_]
+  (response/not-found "Not found"))
+
 (def handler
-  (-> (response/not-found "Not found")
+  (-> not-found
       (resource/wrap-resource "/META-INF/resources")))
