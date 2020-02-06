@@ -24,7 +24,7 @@
                   :preloads        '[devtools.preload
                                      day8.re-frame-10x.preload]}
          config  {:watch-dirs   dirs
-                  :ring-handler 'tape.dev.server/app}
-         build   (merge {:id "auto", :options options, :config config} m)]
+                  :ring-handler 'tape.dev.server/handler}
+         build   (merge {:id "dev", :options options, :config config} m)]
      (api/start build)
      (api/cljs-repl (:id build)))))
