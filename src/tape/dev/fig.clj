@@ -12,8 +12,7 @@
   "Run Figwheel with discovered configuration and `m` overrides."
   ([] (auto {}))
   ([m]
-   (let [watch?  #{"src" "resources" "dev" "dev-resources" "test"
-                   "test-resources" "target"}
+   (let [watch?  #{"src" "resources" "dev/src" "dev/resources" "test" "target"}
          dirs    (->> (fs/list-dir fs/*cwd*)
                       (filter fs/directory?)
                       (map fs/name)
