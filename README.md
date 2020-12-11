@@ -20,6 +20,10 @@ Add it to your `:dev` or `:test` alias deps.
 
 ### Usage
 
+#### Run ClojureScript browser repl
+
+In a Clojure REPL, start ClojureScript browser repl with `(repl/repl)`.
+
 #### Run Figwheel
 
 In a a Clojure REPL, start Figwheel with:
