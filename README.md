@@ -30,6 +30,7 @@ ClojureScript browser repl with `(repl/repl)`.
 
 In a a Clojure REPL, start Figwheel with:
 - `(fig/dev)` a build based on project-level dev.cljs.edn file,
+- `(fig/pig)` as above, with piggieback
 - `(fig/auto m)` a build based on configuration discovered automatically;
   the map `m` is a an optional map of overrides like `{:main 'my.core}`.
 
