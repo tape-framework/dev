@@ -1,14 +1,20 @@
-(ns tape.dev.fig
+(ns tape.dev.build
   (:require [me.raynes.fs :as fs]
+            [cljs.repl.browser :as browser]
             [figwheel.main.api :as api]
             [cider.piggieback :as piggieback]))
 
-(defn dev
+(defn pig
+  "Run a plain cljs repl with piggieback."
+  []
+  (piggieback/cljs-repl (browser/repl-env)))
+
+(defn fig
   "Run Figwheel with the project-level dev.cljs.edn file."
   []
   (api/start "dev"))
 
-(defn pig
+(defn big
   "Run Figwheel with the project-level dev.cljs.edn file & piggieback."
   []
   (api/start {:mode :serve} "dev")

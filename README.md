@@ -22,17 +22,17 @@ Add it to your `:dev` or `:test` alias deps.
 
 #### Run ClojureScript browser repl
 
-In a Clojure [nREPL](https://nrepl.org/) with
-[piggieback](https://github.com/nrepl/piggieback) middleware, start
-ClojureScript browser repl with `(repl/repl)`.
-
 #### Run Figwheel
 
-In a a Clojure REPL, start Figwheel with:
-- `(fig/dev)` a build based on project-level dev.cljs.edn file,
-- `(fig/pig)` as above, with piggieback
-- `(fig/auto m)` a build based on configuration discovered automatically;
+In a a Clojure REPL, start:
+- `(build/pig)` CLJS REPL with piggieback.
+- `(build/fig)` Figwheel with a build based on project-level dev.cljs.edn file.
+- `(build/big)` as above, with piggieback
+- `(build/auto m)` a build based on configuration discovered automatically;
   the map `m` is a an optional map of overrides like `{:main 'my.core}`.
+
+Note: for piggieback: use a Clojure [nREPL](https://nrepl.org/) with
+[piggieback](https://github.com/nrepl/piggieback) middleware.
 
 #### Serve WebJars assets
 
