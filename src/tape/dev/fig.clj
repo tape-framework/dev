@@ -1,11 +1,18 @@
 (ns tape.dev.fig
-  (:require [figwheel.main.api :as api]
-            [me.raynes.fs :as fs]))
+  (:require [me.raynes.fs :as fs]
+            [figwheel.main.api :as api]
+            [cider.piggieback :as piggieback]))
 
 (defn dev
   "Run Figwheel with the project-level dev.cljs.edn file."
   []
   (api/start "dev"))
+
+(defn pig
+  "Run Figwheel with the project-level dev.cljs.edn file & piggieback."
+  []
+  (api/start {:mode :serve} "dev")
+  (piggieback/cljs-repl (api/repl-env "dev")))
 
 (defn auto
   "Run Figwheel with discovered configuration and `m` overrides."
