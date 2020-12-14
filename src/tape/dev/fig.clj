@@ -5,8 +5,7 @@
 (defn dev
   "Run Figwheel with the project-level dev.cljs.edn file."
   []
-  (api/start "dev")
-  (api/cljs-repl "dev"))
+  (api/start "dev"))
 
 (defn auto
   "Run Figwheel with discovered configuration and `m` overrides."
