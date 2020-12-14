@@ -22,7 +22,9 @@ Add it to your `:dev` or `:test` alias deps.
 
 #### Run ClojureScript browser repl
 
-In a Clojure REPL, start ClojureScript browser repl with `(repl/repl)`.
+In a Clojure [nREPL](https://nrepl.org/) with
+[piggieback](https://github.com/nrepl/piggieback) middleware, start
+ClojureScript browser repl with `(repl/repl)`.
 
 #### Run Figwheel
 

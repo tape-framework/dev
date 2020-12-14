@@ -1,6 +1,6 @@
 (ns tape.dev.repl
-  (:require [cljs.repl :as repl]
+  (:require [cider.piggieback :as piggieback]
             [cljs.repl.browser :as browser]))
 
 (defn repl []
-  (repl/repl (browser/repl-env)))
+  (piggieback/cljs-repl (browser/repl-env)))
