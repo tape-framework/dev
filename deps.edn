@@ -9,4 +9,5 @@
          org.webjars.npm/bulma         {}
          integrant-repl/integrant-repl {}
          nrepl/nrepl                   {}
-         cider/piggieback              {}}}
+         cider/piggieback              {}
+         olical/cljs-test-runner       {}}}
