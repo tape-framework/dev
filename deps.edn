@@ -10,4 +10,5 @@
          integrant-repl/integrant-repl {}
          nrepl/nrepl                   {}
          cider/piggieback              {}
+         com.cognitect/test-runner     {}
          olical/cljs-test-runner       {}}}
